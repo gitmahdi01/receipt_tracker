@@ -9,10 +9,17 @@ import 'screens/org_setup_screen.dart';
 import 'screens/main_shell_screen.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+  // Keep the native splash visible until Firebase is ready.
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  // Firebase is ready — remove the splash and show the app.
+  
+
   runApp(const ReceiptTrackerApp());
 }
 
@@ -73,7 +80,8 @@ class AuthGate extends StatelessWidget {
               );
             }
 
-            final data = userDocSnapshot.data!.data() as Map<String, dynamic>;
+            final data =
+                userDocSnapshot.data!.data() as Map<String, dynamic>;
             final orgId = data['orgId'];
 
             if (orgId == null) {
