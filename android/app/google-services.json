@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "982890974352",
+    "project_id": "receipt-tracker-4b348",
+    "storage_bucket": "receipt-tracker-4b348.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:982890974352:android:1308057181cf7413809c15",
+        "android_client_info": {
+          "package_name": "com.example.receipt_tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "982890974352-p13ln5r6naj6e1h37itmc7hq4d1l95gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8_cHkPkB1Pu4Kz6SkC_oRwGvjkOYkvVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "982890974352-p13ln5r6naj6e1h37itmc7hq4d1l95gg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "982890974352-04t0n083ai0tnlgphd3pv1ol5r9mgsjm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.receiptTracker"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
