@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Receipt Tracker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f5f7ff;
+      color: #1a1a2e;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 4px 40px rgba(61, 90, 254, 0.10);
+      text-align: center;
+    }
+
+    .icon {
+      width: 96px;
+      height: 96px;
+      background: #3D5AFE;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+
+    .icon svg {
+      width: 52px;
+      height: 52px;
+      fill: white;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #3D5AFE;
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      padding: 16px 32px;
+      border-radius: 14px;
+      width: 100%;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .download-btn:hover {
+      background: #2a45e8;
+      transform: translateY(-1px);
+    }
+
+    .download-btn:active {
+      transform: translateY(0);
+    }
+
+    .download-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
+
+    .version {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 12px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 32px 0;
+    }
+
+    .steps {
+      text-align: left;
+    }
+
+    .steps h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .step-num {
+      background: #f0f3ff;
+      color: #3D5AFE;
+      font-size: 12px;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .step-text strong {
+      color: #1a1a2e;
+    }
+
+    .warning {
+      background: #fff8e1;
+      border: 1px solid #ffe082;
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: #7a6000;
+      line-height: 1.5;
+      margin-top: 24px;
+      text-align: left;
+    }
+
+    footer {
+      margin-top: 32px;
+      font-size: 12px;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <!-- App icon -->
+    <div class="icon">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 3H5a2 2 0 0 0-2 2v16l4-2 4 2 4-2 4 2V5a2 2 0 0 0-2-2zm-7 12H8v-2h4v2zm4-4H8V9h8v2z"/>
+      </svg>
+    </div>
+
+    <h1>Receipt Tracker</h1>
+    <p class="tagline">Scan, organise, and export your team's receipts.<br/>Built for Android.</p>
+
+    <a class="download-btn" href="app-release.apk" download>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 20h14v-2H5v2zm7-18L5.33 9h4.84v6h3.66V9h4.84L12 2z" transform="rotate(180 12 12)"/>
+        <path d="M19 9h-4V3H9v6H5l7 7 7-7z"/>
+      </svg>
+      Download APK
+    </a>
+    <p class="version">Version 1.0.0 · Android 5.0+</p>
+
+    <hr class="divider" />
+
+    <div class="steps">
+      <h2>How to install</h2>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Tap <strong>Download APK</strong> above and wait for it to finish.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Open your <strong>Downloads</strong> folder and tap the file.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">If prompted, go to <strong>Settings → Apps → Special app access → Install unknown apps</strong> and allow your browser.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Tap <strong>Install</strong> and open the app.</div>
+      </div>
+
+      <div class="warning">
+        ⚠️ Android may show a security warning because this app is not from the Play Store — this is normal for direct APK installs. The app is safe to install.
+      </div>
+    </div>
+  </div>
+
+  <footer>Receipt Tracker · Private distribution</footer>
+</body>
+</html>
